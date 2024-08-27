@@ -1,0 +1,54 @@
+*{
+    margin: 1;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content:center;
+    background-color: rgb(77, 161, 87);
+    align-items: center;
+    min-height: 500px;
+}
+.wrap{
+    background-color: rgb(185, 61, 166);
+    width: 300px;
+    height: 300px;
+    color: white;    
+}
+.wrap h1{
+    text-align: center;
+}
+.wrap .inputtype{
+    width: 100%;
+    border: none;
+    height: 50px;
+    margin: 20px;
+    margin-left: 20px 0;
+   
+}
+.wrap .inpuyy{
+    width: 100%;
+    top: 50px;
+    
+    height: 50px;
+}
+.inputtype input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.inpuyy input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.inputtype ::placeholder{
+    color: antiquewhite;
+}
+.inpuyy ::placeholder{
+    color: white;
+}
