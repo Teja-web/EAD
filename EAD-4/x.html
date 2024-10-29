@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class time table using bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (Optional if you need dropdowns or other features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .table thead th,
+        .table tbody th {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="text-center py-3 mb-4 border-bottom">
+            <h1>IT-1 V SEM TIME TABLE R22</h1>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Day/Time</th>
+                            <th colspan="7" class="text-center">Period</th>
+                        </tr>
+                        <tr>
+                            <th>9:10 - 10:10 am</th>
+                            <th>10:10 - 11:10 am</th>
+                            <th>11:15 - 12:15 pm</th>
+                            <th>12:15 - 1:00 pm</th>
+                            <th>1:00 - 2:00 pm</th>
+                            <th>2:00 - 3:00 pm</th>
+                            <th>3:05 - 4:05 pm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td colspan="2">CT Lab(B1)/ML Lab (B2)</td>
+                            <td>PE-2</td>
+                            <td rowspan="6" class="text-center align-middle">Lunch Break</td>
+                            <td>CN</td>
+                            <td>SE</td>
+                            <td>EAD</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>PE-2</td>
+                            <td>ML</td>
+                            <td>EAD</td>
+                            <td>SE</td>
+                            <td colspan="2">CN Lab(B1)/EAD Lab(B2)</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>CN</td>
+                            <td>EAD</td>
+                            <td>FLAT</td>
+                            <td>ML</td>
+                            <td colspan="2">CC Lab(B1)/Sports or Library(B2)</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>ML</td>
+                            <td>CN</td>
+                            <td colspan="2">ML Lab(B1)/CT Lab(B2)</td>
+                            <td>FLAT</td>
+                            <td>SE</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td colspan="2">EAD Lab(B1)/CN Lab(B2)</td>
+                            <td>PE-2</td>
+                            <td>FLAT</td>
+                            <td colspan="2">Sports or Library(B1)/CC Lab(B2)</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Mentoring</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 CBIT IT Department. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
