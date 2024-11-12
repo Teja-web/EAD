@@ -11,16 +11,23 @@ const users = [
     { name: "hello", msg: "Yentra" }
 ];
 
-// Generate Token
+// Generate Token based on user-provided data
 app.post('/token', (req, res) => {
-    const user = { name: req.body.username };
-    const token = jwt.sign(user, process.env.SECRET_KEY);
-    return res.json({ jwttoken: token });
+    const { username, msg } = req.body;
+    if (!username || !msg) {
+        return res.status(400).json({ error: "Username and message are required" });
+    }
+
+    // Create a payload using the body data
+    const payload = { name: username, message: msg };
+    const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' });
+
+    return res.json({ token });
 });
 
 // Basic Test Route
 app.get('/', (req, res) => {
-    res.send("hellll");
+    res.send("Hello, world!");
 });
 
 // Token Verification Route
@@ -33,11 +40,10 @@ app.get('/protected', (req, res) => {
         if (err) {
             console.log("Invalid token");
             return res.sendStatus(403);
-        } else {
-            console.log(user);
-            req.user = user;
-            res.json(user);
         }
+
+        // Send back the decoded user information
+        res.json({ user });
     });
 });
 
